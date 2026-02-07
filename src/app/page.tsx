@@ -96,7 +96,7 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-7 text-[#1c1c1c]">
-                <span className="font-brother text-[36px] font-[350] uppercase leading-[35px] tracking-[-0.03em] text-[#1c1c1c]">
+                <span className="font-brother text-[36px] font-[350] uppercase leading-[35px] tracking-[-0.03em] text-center text-[#1c1c1c]">
                   What We Do
                 </span>
                 <p className="mt-2 font-inter text-[18px] leading-[26px] text-[#2b2b2b]">
@@ -171,9 +171,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-[728px] overflow-hidden text-white">
+      <section className="relative h-[639px] overflow-hidden text-white">
         <div
-          className="absolute inset-0 opacity-65"
+          className="absolute inset-0"
           style={{
             background:
               "linear-gradient(120.95deg, #706363 0%, #2D2927 91.56%)",
@@ -182,57 +182,85 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay"
           style={{
-            backgroundImage: "url('/assets/chip%20background.png')",
+            backgroundImage: "url('/assets/chip%20background%201.jpg')",
           }}
         />
-        <div className="relative mx-auto flex h-full max-w-[1512px] flex-col justify-center px-10 py-16 md:py-20">
+        <div className="relative mx-auto flex h-full max-w-[1512px] flex-col justify-center px-10">
           <div className="flex items-center justify-center gap-4 text-white/90">
-            <Image
-              src="/assets/circle%20%26%20arrow.png"
-              alt=""
-              width={53}
-              height={31}
-              className="h-6 w-auto opacity-90 invert"
-            />
-            <span className="font-brother text-[24px] uppercase tracking-[0.2em]">
+            <div className="relative h-[28px] w-[82px]">
+              <Image
+                src="/assets/right%20arrow.png"
+                alt=""
+                width={82}
+                height={28}
+                className="h-full w-full opacity-90"
+              />
+              <Image
+                src="/assets/circle%20%26%20arrow.png"
+                alt=""
+                width={53}
+                height={31}
+                className="absolute left-0 top-1/2 h-6 w-auto -translate-y-1/2 opacity-90 invert"
+              />
+            </div>
+            <span className="font-brother text-[36px] font-[350] uppercase leading-[35px] tracking-[-0.03em]">
               How We&apos;re Advancing
             </span>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid justify-items-center gap-x-12 gap-y-12 md:grid-cols-2">
             {[
               {
-                text: "In active dialogue with federal and state stakeholders on data-center power needs",
-                tone: "from-[#f0d9c5] to-[#a07a5a]",
+                lines: [
+                  "In active dialogue with federal and state",
+                  "stakeholders on data-center power needs",
+                ],
+                image: "/assets/Ellipse%2029.png",
               },
               {
-                text: "Coordinating with major utilities and municipalities on expedited power timelines",
-                tone: "from-[#7fd7ff] to-[#1d4f6f]",
+                lines: [
+                  "Coordinating with major utilities and",
+                  "municipalities on expedited power timelines",
+                ],
+                image: "/assets/Ellipse%2031.png",
               },
               {
-                text: "Engaged with defense and mission-critical installations",
-                tone: "from-[#ffb86c] to-[#6b3a2a]",
+                lines: [
+                  "Engaged with defense and",
+                  "mission-critical installations",
+                ],
+                image: "/assets/Ellipse%2030.png",
               },
               {
-                text: "Partnering with established energy and technology providers",
-                tone: "from-[#ffb3c7] to-[#4d2b45]",
+                lines: [
+                  "Partnering with established energy and",
+                  "technology providers",
+                ],
+                image: "/assets/Ellipse%2032.png",
               },
             ].map((item) => (
               <div
-                className="flex items-center gap-4 rounded-full bg-white/10 px-6 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.25)] backdrop-blur"
-                key={item.text}
+                className="flex h-[124px] w-[620px] items-center gap-7 rounded-full bg-[#2b2220]/65 pl-0 pr-7 shadow-[0_16px_36px_rgba(0,0,0,0.35)]"
+                key={item.lines[0]}
               >
-                <div
-                  className={`h-14 w-14 rounded-full bg-gradient-to-br ${item.tone} ring-2 ring-white/30`}
-                />
-                <p className="text-sm leading-relaxed text-white/85">
-                  {item.text}
+                <div className="h-[124px] w-[124px] shrink-0 overflow-hidden rounded-full ring-2 ring-white/30">
+                  <Image
+                    src={item.image}
+                    alt=""
+                    width={124}
+                    height={124}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <p className="font-inter text-[16px] leading-[27px] text-white/85">
+                  <span className="block">{item.lines[0]}</span>
+                  <span className="block">{item.lines[1]}</span>
                 </p>
               </div>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
+          <div className="mt-10 flex justify-center">
             <button
-              className="border border-white/60 px-8 py-2 text-[11px] uppercase tracking-[0.3em] text-white/85 transition hover:border-white hover:text-white"
+              className="border border-[#ff8000] px-7 py-2 text-[11px] uppercase tracking-[0.3em] text-white/90 transition hover:border-[#ff8000] hover:text-white"
               type="button"
             >
               Meet Our Partners
