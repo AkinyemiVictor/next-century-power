@@ -173,7 +173,7 @@ export default function Home() {
       </section>
       <section className="relative h-[728px] overflow-hidden text-white">
         <div
-          className="absolute inset-0 opacity-80"
+          className="absolute inset-0 opacity-65"
           style={{
             background:
               "linear-gradient(120.95deg, #706363 0%, #2D2927 91.56%)",
