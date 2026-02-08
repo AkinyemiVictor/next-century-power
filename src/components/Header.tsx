@@ -3,12 +3,15 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header
-      className="w-full bg-white text-black"
+      className="relative z-20 w-full overflow-hidden bg-white text-black"
       style={{
-        clipPath: "polygon(0 0, 100% 0, calc(100% - 32px) 100%, 0 100%)",
+        clipPath:
+          "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 28px) 100%, 0 100%)",
+        WebkitClipPath:
+          "polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 28px) 100%, 0 100%)",
       }}
     >
-      <div className="mx-auto flex w-full max-w-[1512px] items-center justify-between px-10 py-5">
+      <div className="mx-auto flex h-[107px] w-full max-w-[1512px] items-center justify-between px-10">
         <div className="flex items-center">
           <Image
             src="/assets/logo.png"
@@ -26,18 +29,14 @@ export default function Header() {
           >
             Let&apos;s Chat
           </button>
-          <button
-            className="relative h-12 w-12 text-black"
-            type="button"
-            aria-label="Open menu"
-          >
-            <span className="absolute left-[18px] top-[16px] h-0.5 w-4 bg-current" />
-            <span className="absolute left-[18px] top-[23px] h-0.5 w-4 bg-current" />
-            <span className="absolute left-[18px] top-[30px] h-0.5 w-4 bg-current" />
-            <span className="absolute left-2 top-2 h-3 w-3 border-l-2 border-t-2 border-current" />
-            <span className="absolute right-2 top-2 h-3 w-3 border-r-2 border-t-2 border-current" />
-            <span className="absolute bottom-2 left-2 h-3 w-3 border-b-2 border-l-2 border-current" />
-            <span className="absolute bottom-2 right-2 h-3 w-3 border-b-2 border-r-2 border-current" />
+          <button type="button" aria-label="Open menu">
+            <Image
+              src="/assets/pager.png"
+              alt=""
+              width={50}
+              height={43}
+              className="h-10 w-auto"
+            />
           </button>
         </div>
       </div>

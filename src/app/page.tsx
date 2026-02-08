@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <section className="relative w-full overflow-hidden">
+      <section className="relative -mt-[32px] w-full overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -187,20 +187,20 @@ export default function Home() {
         />
         <div className="relative mx-auto flex h-full max-w-[1512px] flex-col justify-center px-10">
           <div className="flex items-center justify-center gap-4 text-white/90">
-            <div className="relative h-[28px] w-[82px]">
-              <Image
-                src="/assets/right%20arrow.png"
-                alt=""
-                width={82}
-                height={28}
-                className="h-full w-full opacity-90"
-              />
+            <div className="relative h-[31px] w-[53px]">
               <Image
                 src="/assets/circle%20%26%20arrow.png"
                 alt=""
                 width={53}
                 height={31}
-                className="absolute left-0 top-1/2 h-6 w-auto -translate-y-1/2 opacity-90 invert"
+                className="h-full w-full opacity-90 invert"
+              />
+              <Image
+                src="/assets/right%20arrow.png"
+                alt=""
+                width={14}
+                height={14}
+                className="absolute right-[30px] top-1/2 h-[14px] w-[14px] -translate-y-1/2"
               />
             </div>
             <span className="font-brother text-[36px] font-[350] uppercase leading-[35px] tracking-[-0.03em]">
@@ -239,7 +239,7 @@ export default function Home() {
               },
             ].map((item) => (
               <div
-                className="flex h-[124px] w-[620px] items-center gap-7 rounded-full bg-[#2b2220]/65 pl-0 pr-7 shadow-[0_16px_36px_rgba(0,0,0,0.35)]"
+                className="flex h-[124px] w-[560px] items-center gap-7 rounded-full bg-[#2a1f1c]/50 pl-0 pr-7"
                 key={item.lines[0]}
               >
                 <div className="h-[124px] w-[124px] shrink-0 overflow-hidden rounded-full ring-2 ring-white/30">
@@ -260,7 +260,7 @@ export default function Home() {
           </div>
           <div className="mt-10 flex justify-center">
             <button
-              className="border border-[#ff8000] px-7 py-2 text-[11px] uppercase tracking-[0.3em] text-white/90 transition hover:border-[#ff8000] hover:text-white"
+              className="border border-white px-10 py-3 text-[16px] uppercase tracking-[0.3em] text-white/90 transition hover:border-white hover:text-white"
               type="button"
             >
               Meet Our Partners

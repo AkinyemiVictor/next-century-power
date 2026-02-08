@@ -30,7 +30,7 @@ body {
 }
 
 .font-brother {
-  font-family: "Brother 1816", var(--font-inter), "Helvetica Neue", Arial,
+  font-family: var(--font-brother), var(--font-inter), "Helvetica Neue", Arial,
     sans-serif;
 }
 
