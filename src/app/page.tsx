@@ -269,28 +269,37 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="mx-auto flex h-[639px] max-w-[1512px] flex-col justify-center px-10">
+        <div className="mx-auto flex h-[760px] max-w-[1512px] flex-col justify-center px-10">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 text-[#2b2b2b]">
-              <Image
-                src="/assets/circle%20%26%20arrow.png"
-                alt=""
-                width={53}
-                height={31}
-                className="h-6 w-auto"
-              />
-              <span className="font-brother text-[20px] uppercase tracking-[0.2em]">
+            <div className="flex items-center gap-4 text-[#2b2b2b]">
+              <div className="relative h-[31px] w-[53px]">
+                <Image
+                  src="/assets/circle%20%26%20arrow.png"
+                  alt=""
+                  width={53}
+                  height={31}
+                  className="h-full w-full"
+                />
+                <Image
+                  src="/assets/lightning.png"
+                  alt=""
+                  width={14}
+                  height={14}
+                  className="absolute left-[9px] top-1/2 h-[14px] w-[14px] -translate-y-1/2"
+                />
+              </div>
+              <span className="font-brother text-[32px] uppercase tracking-[0.18em]">
                 Your Power Evolution, Simplified
               </span>
             </div>
             <button
-              className="border border-[#ff8000] px-6 py-1.5 text-[10px] uppercase tracking-[0.3em] text-[#ff8000] transition hover:bg-[#ff8000]/10"
+              className="border border-[#ff8000] px-8 py-2.5 text-[14px] uppercase tracking-[0.3em] text-[#ff8000] transition hover:bg-[#ff8000]/10"
               type="button"
             >
               How We Do It
             </button>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-4 md:justify-items-center">
+          <div className="mt-16 flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-0">
             {[
               {
                 title: "Lock in the data center requirement",
@@ -310,24 +319,47 @@ export default function Home() {
               },
             ].map((step, index) => (
               <div
-                className="flex w-[180px] flex-col items-center"
+                className="flex w-[260px] flex-col items-center"
                 key={step.title}
               >
-                <div className="h-[132px] w-[132px] overflow-hidden rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+                <div className="h-[224px] w-[224px] overflow-hidden rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.12)]">
                   <Image
                     src={step.image}
                     alt=""
-                    width={132}
-                    height={132}
+                    width={224}
+                    height={224}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="mt-4 flex w-full items-start gap-3 text-left text-[#2b2b2b]">
-                  <span className="font-brother text-[16px]">
+                <div className="mt-6 flex w-full items-start gap-4 text-left text-[#2b2b2b]">
+                  <span className="font-brother text-[26px]">
                     {index + 1}
                   </span>
-                  <span className="mt-1 h-10 w-px bg-black/30" />
-                  <p className="text-[11px] leading-[16px]">{step.title}</p>
+                  <span className="mt-1 h-12 w-px bg-black/30" />
+                <p className="text-[17px] leading-[24px]">
+                  <span className="block">
+                    {step.title ===
+                    "Lock in the data center requirement"
+                      ? "Lock in the data center"
+                      : step.title === "Build on-site generation"
+                        ? "Build on-site"
+                        : step.title ===
+                            "Capture carbon emissions to create value"
+                          ? "Capture carbon emissions"
+                          : "Transition to SMRs over"}
+                  </span>
+                  <span className="block">
+                    {step.title ===
+                    "Lock in the data center requirement"
+                      ? "requirement"
+                      : step.title === "Build on-site generation"
+                        ? "generation"
+                        : step.title ===
+                            "Capture carbon emissions to create value"
+                          ? "to create value"
+                          : "time"}
+                  </span>
+                </p>
                 </div>
               </div>
             ))}
