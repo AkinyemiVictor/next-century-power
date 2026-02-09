@@ -16,15 +16,15 @@ export default function Header() {
           <Image
             src="/assets/logo.png"
             alt="Next Century Power"
-            width={220}
-            height={18}
+            width={260}
+            height={22}
             priority
-            className="h-[18px] w-auto"
+            className="h-[24px] w-auto"
           />
         </div>
         <div className="flex items-center gap-5">
           <button
-            className="border border-[#ff8000] px-8 py-2 text-[11px] uppercase tracking-[0.35em] text-[#ff8000] transition hover:bg-[#ff8000]/10"
+            className="inline-flex h-[43px] w-[246px] items-center justify-center border border-[#ff8000] font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-[#ff8000] transition hover:bg-[#ff8000]/10"
             type="button"
           >
             Let&apos;s Chat

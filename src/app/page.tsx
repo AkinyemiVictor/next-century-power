@@ -116,7 +116,7 @@ export default function Home() {
                   cost-stable power.
                 </p>
                 <button
-                  className="h-[36px] w-[172px] border border-[#ff8000] text-[10px] uppercase tracking-[0.32em] text-[#ff8000] transition hover:bg-[#ff8000]/10"
+                  className="inline-flex items-center justify-center border border-[#ff8000] px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-[#ff8000] transition hover:bg-[#ff8000]/10"
                   type="button"
                 >
                   Our Process
@@ -260,7 +260,7 @@ export default function Home() {
           </div>
           <div className="mt-10 flex justify-center">
             <button
-              className="border border-white px-10 py-3 text-[16px] uppercase tracking-[0.3em] text-white/90 transition hover:border-white hover:text-white"
+              className="inline-flex items-center justify-center border border-white px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-white/90 transition hover:border-white hover:text-white"
               type="button"
             >
               Meet Our Partners
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
       <section className="bg-white">
         <div className="mx-auto flex h-[760px] max-w-[1512px] flex-col justify-center px-10">
-          <div className="flex items-center justify-between">
+          <div className="mx-auto flex w-full max-w-[1120px] items-center justify-between">
             <div className="flex items-center gap-4 text-[#2b2b2b]">
               <div className="relative h-[31px] w-[53px]">
                 <Image
@@ -285,81 +285,65 @@ export default function Home() {
                   alt=""
                   width={14}
                   height={14}
-                  className="absolute left-[9px] top-1/2 h-[14px] w-[14px] -translate-y-1/2"
+                  className="absolute left-[9px] top-1/2 h-[14px] w-[14px] -translate-y-1/2 rotate-[18deg]"
                 />
               </div>
-              <span className="font-brother text-[32px] uppercase tracking-[0.18em]">
+              <span className="font-brother text-[36px] uppercase leading-[30px] tracking-[-0.05em]">
                 Your Power Evolution, Simplified
               </span>
             </div>
             <button
-              className="border border-[#ff8000] px-8 py-2.5 text-[14px] uppercase tracking-[0.3em] text-[#ff8000] transition hover:bg-[#ff8000]/10"
+              className="inline-flex items-center justify-center border border-[#ff8000] px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-[#ff8000] transition hover:bg-[#ff8000]/10"
               type="button"
             >
               How We Do It
             </button>
           </div>
-          <div className="mt-16 flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-0">
+          <div className="mx-auto mt-16 flex w-full max-w-[1120px] flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-0 xl:max-w-[1320px]">
             {[
               {
                 title: "Lock in the data center requirement",
+                lines: ["Lock in the data", "center requirement"],
                 image: "/assets/Ellipse%2033.png",
               },
               {
                 title: "Build on-site generation",
+                lines: ["Build on-site", "generation"],
                 image: "/assets/Ellipse%2034.png",
               },
               {
                 title: "Capture carbon emissions to create value",
+                lines: ["Capture carbon emissions", "to create value"],
                 image: "/assets/Ellipse%2035.png",
               },
               {
                 title: "Transition to SMRs over time",
+                lines: ["Transition to", "SMRs over time"],
                 image: "/assets/Ellipse%2036.png",
               },
             ].map((step, index) => (
               <div
-                className="flex w-[260px] flex-col items-center"
+                className="flex w-[224px] flex-col items-center md:w-[220px] lg:w-[260px] xl:w-[300px]"
                 key={step.title}
               >
-                <div className="h-[224px] w-[224px] overflow-hidden rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.12)]">
+                <div className="h-[224px] w-[224px] overflow-hidden rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.12)] md:h-[220px] md:w-[220px] lg:h-[260px] lg:w-[260px] xl:h-[300px] xl:w-[300px]">
                   <Image
                     src={step.image}
                     alt=""
-                    width={224}
-                    height={224}
+                    width={300}
+                    height={300}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="mt-6 flex w-full items-start gap-4 text-left text-[#2b2b2b]">
+                <div className="mt-4 flex w-full items-start justify-center gap-3 text-[#2b2b2b]">
                   <span className="font-brother text-[26px]">
                     {index + 1}
                   </span>
-                  <span className="mt-1 h-12 w-px bg-black/30" />
-                <p className="text-[17px] leading-[24px]">
-                  <span className="block">
-                    {step.title ===
-                    "Lock in the data center requirement"
-                      ? "Lock in the data center"
-                      : step.title === "Build on-site generation"
-                        ? "Build on-site"
-                        : step.title ===
-                            "Capture carbon emissions to create value"
-                          ? "Capture carbon emissions"
-                          : "Transition to SMRs over"}
-                  </span>
-                  <span className="block">
-                    {step.title ===
-                    "Lock in the data center requirement"
-                      ? "requirement"
-                      : step.title === "Build on-site generation"
-                        ? "generation"
-                        : step.title ===
-                            "Capture carbon emissions to create value"
-                          ? "to create value"
-                          : "time"}
-                  </span>
-                </p>
+                  <span className="mt-1 h-10 w-px bg-black/30" />
+                  <p className="text-left text-[17px] leading-[24px]">
+                    <span className="block">{step.lines[0]}</span>
+                    <span className="block">{step.lines[1]}</span>
+                  </p>
                 </div>
               </div>
             ))}
@@ -375,26 +359,41 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/0 via-black/45 to-black/70" />
         <div className="relative mx-auto flex h-full max-w-[1512px] items-center justify-end px-10">
-          <div className="max-w-[420px]">
-            <div className="flex items-center gap-3 text-white/90">
-              <Image
-                src="/assets/circle%20%26%20arrow.png"
-                alt=""
-                width={53}
-                height={31}
-                className="h-6 w-auto opacity-90 invert"
-              />
-              <span className="font-brother text-[20px] uppercase tracking-[0.2em]">
+          <div className="relative max-w-[600px]">
+            <div className="relative flex items-center">
+              <div className="absolute -left-[65px] top-1/2 h-[31px] w-[53px] -translate-y-1/2 translate-y-[1px]">
+                <Image
+                  src="/assets/circle%20%26%20arrow.png"
+                  alt=""
+                  width={53}
+                  height={31}
+                  className="h-full w-full opacity-90 invert"
+                />
+                <Image
+                  src="/assets/cloud.png"
+                  alt=""
+                  width={16}
+                  height={11}
+                  className="absolute left-[8px] top-1/2 h-[11px] w-[16px] -translate-y-1/2"
+                />
+              </div>
+              <span className="block font-brother text-[36px] uppercase leading-[36px] tracking-[-0.03em] text-white/90">
                 Carbon Capture Tech
               </span>
             </div>
-            <p className="mt-4 text-[12px] leading-[20px] text-white/80">
-              Our capture pathway collects emissions for later processing of
-              high-value CO2 materials, an advantage that supports corporate
-              carbon neutrality goals without slowing the race to power.
+            <p className="mt-4 font-inter text-[16px] font-light leading-[27px] tracking-[0] text-white/80">
+              <span className="block">
+                Our capture pathway collects emissions for later processing of
+              </span>
+              <span className="block">
+                high-value CO2 materials, an advantage that supports corporate
+              </span>
+              <span className="block">
+                carbon neutrality goals without slowing the race to power.
+              </span>
             </p>
             <button
-              className="mt-6 border border-white/60 px-6 py-2 text-[10px] uppercase tracking-[0.28em] text-white/85 transition hover:border-white hover:text-white"
+              className="mt-6 inline-flex items-center justify-center border border-white/60 px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-white/85 transition hover:border-white hover:text-white"
               type="button"
             >
               How We Reduce Carbon
@@ -402,43 +401,59 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#ff8000]">
-        <div className="mx-auto flex max-w-[1512px] items-center justify-between px-10 py-10">
+      <section className="relative z-10 h-[210px] bg-[linear-gradient(180deg,_#FF8000_0%,_#E57300_79.53%)]">
+        <div className="mx-auto flex h-full max-w-[1512px] items-center justify-end gap-16 pl-12 pr-40">
           <div className="flex items-center gap-6 text-white">
-            <Image
-              src="/assets/circle%20%26%20arrow.png"
-              alt=""
-              width={53}
-              height={31}
-              className="h-7 w-auto invert"
-            />
-            <div className="font-brother text-[22px] uppercase leading-[24px] tracking-[0.18em]">
+            <div className="relative h-[31px] w-[53px]">
+              <Image
+                src="/assets/circle%20%26%20arrow.png"
+                alt=""
+                width={53}
+                height={31}
+                className="h-full w-full invert"
+              />
+              <Image
+                src="/assets/fast%20forward.png"
+                alt=""
+                width={14}
+                height={14}
+                className="absolute left-[10px] top-1/2 h-[14px] w-[14px] -translate-y-1/2"
+              />
+            </div>
+            <div className="font-brother text-[36px] font-[250] uppercase leading-[35px] tracking-[-0.03em]">
               Ready To
               <br />
               Move Faster?
             </div>
           </div>
-          <p className="max-w-[340px] text-[12px] leading-[18px] text-white/85">
+          <p className="max-w-[340px] font-inter text-[16px] font-[200] leading-[27px] tracking-[0] text-white/85">
             Tell us what you need and when you need it. Our team responds
             quickly and routes your inquiry to the right experts.
           </p>
           <button
-            className="border border-white/80 px-8 py-2 text-[10px] uppercase tracking-[0.3em] text-white transition hover:bg-white/10"
+            className="inline-flex h-[43px] w-[246px] items-center justify-center border border-white/80 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-white transition hover:bg-white/10"
             type="button"
           >
             Let&apos;s Chat
           </button>
         </div>
       </section>
-      <footer className="bg-black text-white">
-        <div className="mx-auto grid max-w-[1512px] grid-cols-1 md:grid-cols-[1.4fr_0.6fr]">
+      <footer
+        className="relative z-0 bg-black text-white"
+        style={{
+          clipPath: "polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)",
+          WebkitClipPath:
+            "polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)",
+        }}
+      >
+        <div className="mx-auto grid max-w-[1512px] grid-cols-1 md:grid-cols-[1.4fr_0.6fr] md:pr-0">
           <div className="px-10 py-12">
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo%20for%20black%20background.png"
               alt="Next Century Power"
-              width={220}
-              height={28}
-              className="h-6 w-auto"
+              width={300}
+              height={40}
+              className="h-10 w-auto"
             />
             <div className="mt-6 flex flex-wrap gap-6 text-[10px] uppercase tracking-[0.2em] text-white/70">
               {[
@@ -454,13 +469,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex items-center justify-center bg-[#3c3331] px-10 py-12 text-center">
-            <div className="max-w-[220px] text-white/80">
+            <div className="flex items-center justify-end bg-[#3c3331] pl-10 pr-0 py-12 text-right">
+              <div className="max-w-[220px] text-white/80">
               <p className="text-[12px] leading-[18px]">
                 Explore how our approach to energy can benefit your region.
               </p>
               <button
-                className="mt-6 border border-white/70 px-6 py-2 text-[10px] uppercase tracking-[0.3em] text-white/90 transition hover:border-white hover:text-white"
+                className="mt-6 inline-flex items-center justify-center border border-white/70 px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-white/90 transition hover:border-white hover:text-white"
                 type="button"
               >
                 Contact
