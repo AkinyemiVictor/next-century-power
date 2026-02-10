@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "@/components/Header";
+import FooterMenu from "@/components/FooterMenu";
 
 const IconArrow = ({
   icon,
@@ -439,42 +440,33 @@ export default function Home() {
         </div>
       </section>
       <footer
-        className="relative z-0 bg-black text-white"
+        className="relative z-20 -mt-5 bg-black text-white"
         style={{
           clipPath: "polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)",
           WebkitClipPath:
             "polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px)",
         }}
       >
-        <div className="mx-auto grid max-w-[1512px] grid-cols-1 md:grid-cols-[1.4fr_0.6fr] md:pr-0">
-          <div className="px-10 py-12">
+          <div className="grid w-full grid-cols-1 md:grid-cols-[1.4fr_0.6fr]">
+          <div className="flex flex-col items-start justify-end px-10 py-12">
             <Image
               src="/assets/logo%20for%20black%20background.png"
               alt="Next Century Power"
               width={300}
               height={40}
-              className="h-10 w-auto"
+              className="h-14 w-auto"
             />
-            <div className="mt-6 flex flex-wrap gap-6 text-[10px] uppercase tracking-[0.2em] text-white/70">
-              {[
-                "Our Story",
-                "What We Do",
-                "How We Do It",
-                "Who We Work With",
-                "Sites",
-                "News",
-                "Resources",
-              ].map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
+            <FooterMenu />
           </div>
-            <div className="flex items-center justify-end bg-[#3c3331] pl-10 pr-0 py-12 text-right">
-              <div className="max-w-[220px] text-white/80">
-              <p className="text-[12px] leading-[18px]">
-                Explore how our approach to energy can benefit your region.
-              </p>
-              <button
+            <div className="flex flex-col items-start justify-center bg-[linear-gradient(120.95deg,_#706363_0%,_#2D2927_91.56%)] pl-14 pr-10 py-12 text-left">
+              <div className="max-w-[280px] text-white/80">
+                <p className="font-inter text-[16px] font-[250] leading-[27px] tracking-[0]">
+                  <span className="block">
+                    Explore how our approach to
+                  </span>
+                  <span className="block">energy can benefit your region.</span>
+                </p>
+                <button
                 className="mt-6 inline-flex items-center justify-center border border-white/70 px-10 py-3.5 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-white/90 transition hover:border-white hover:text-white"
                 type="button"
               >
@@ -484,12 +476,23 @@ export default function Home() {
           </div>
         </div>
         <div className="border-t border-white/10">
-          <div className="mx-auto flex max-w-[1512px] items-center justify-between px-10 py-4 text-[10px] text-white/50">
-            <span>© 2025 Next Century Power</span>
-            <span>Website by ◦</span>
+          <div className="grid w-full grid-cols-1 text-[10px] text-white/50 md:grid-cols-[1.4fr_0.6fr]">
+            <div className="flex items-center gap-4 px-10 py-4 font-inter text-[14px] font-[250] leading-[27px] tracking-[0]">
+              <span>© 2025 Next Century Power</span>
+              <span className="h-[18px] w-px bg-white/20" />
+              <span>Website by ◦ Victor Akinyemi</span>
+            </div>
+            <div
+              className="hidden bg-[linear-gradient(120.95deg,_#706363_0%,_#2D2927_91.56%)] md:block"
+              aria-hidden="true"
+            />
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
+
+
+
