@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,12 +30,12 @@ export default function Header() {
             />
           </div>
           <div className="flex items-center gap-5">
-            <button
+            <Link
+              href="/lets-chat"
               className="inline-flex h-[43px] w-[246px] items-center justify-center border border-[#ff8000] font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-center text-[#ff8000] transition hover:bg-[#ff8000]/10"
-              type="button"
             >
               Let&apos;s Chat
-            </button>
+            </Link>
             <button
               type="button"
               aria-label="Open menu"

@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerItems = [
   "Our Story",
@@ -16,29 +17,58 @@ const footerItems = [
 
 export default function FooterMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <>
       <div className="mt-6 flex flex-wrap items-center gap-6 font-brother text-[15px] font-[200] uppercase leading-none tracking-[0.05em] text-white/70">
-        {footerItems.map((item) =>
-          item === "What We Do" ? (
-            <button
-              key={item}
-              type="button"
-              className="bg-transparent p-0 text-white/70 transition hover:text-white"
-              onClick={() => setIsOpen(true)}
-            >
-              {item.toUpperCase()}
-            </button>
-          ) : (
-            <span key={item}>{item.toUpperCase()}</span>
-          )
-        )}
+        {footerItems.map((item) => {
+          if (item === "Our Story") {
+            return (
+              <Link
+                key={item}
+                href="/our-story"
+                className="text-white/70 transition hover:text-white"
+              >
+                {item.toUpperCase()}
+              </Link>
+            );
+          }
+          if (item === "What We Do") {
+            return (
+              <button
+                key={item}
+                type="button"
+                className="bg-transparent p-0 text-white/70 transition hover:text-white"
+                onClick={() => setIsOpen(true)}
+              >
+                {item.toUpperCase()}
+              </button>
+            );
+          }
+          if (item === "News") {
+            return (
+              <Link
+                key={item}
+                href="/news"
+                className="text-white/70 transition hover:text-white"
+              >
+                {item.toUpperCase()}
+              </Link>
+            );
+          }
+          if (item === "Who We Work With") {
+            return (
+              <Link
+                key={item}
+                href="/who-we-work-with"
+                className="text-white/70 transition hover:text-white"
+              >
+                {item.toUpperCase()}
+              </Link>
+            );
+          }
+          return <span key={item}>{item.toUpperCase()}</span>;
+        })}
         <a
           href="#"
           aria-label="LinkedIn"
@@ -54,7 +84,7 @@ export default function FooterMenu() {
         </a>
       </div>
 
-      {isOpen && mounted
+      {isOpen && typeof window !== "undefined"
         ? createPortal(
             <div
               className="fixed inset-0 z-[80] flex items-center justify-center bg-black/40 px-6 py-10 backdrop-blur-[2px]"
@@ -74,7 +104,7 @@ export default function FooterMenu() {
                   aria-label="Close popup"
                   onClick={() => setIsOpen(false)}
                 >
-                  ×
+                  X
                 </button>
                 <div className="flex h-full flex-col md:flex-row">
                   <div className="relative h-[318px] w-full md:h-[318px] md:w-[300px]">
@@ -108,3 +138,4 @@ export default function FooterMenu() {
     </>
   );
 }
+

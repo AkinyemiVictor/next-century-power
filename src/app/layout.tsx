@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["200", "400", "500", "600"],
 });
 
 const brother = localFont({
