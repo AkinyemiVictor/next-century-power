@@ -285,7 +285,7 @@ export default function HowWeDoItPage() {
               infrastructure.
             </p>
             <Link
-              href="/who-we-work-with/inertial"
+              href="/resources"
               className="mt-6 inline-flex h-[43px] w-[246px] items-center justify-center border border-white/70 font-brother text-[15px] leading-[15px] uppercase tracking-[0.05em] text-white/90 transition hover:border-white hover:text-white"
             >
               How We Reduce Carbon
