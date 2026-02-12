@@ -72,13 +72,13 @@ export default function OurStoryPage() {
             src="/assets/our%20story%20hero.png"
             alt=""
             fill
-            className="object-contain"
+            className="object-cover object-center"
             sizes="100vw"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20" />
           <div className="absolute inset-0">
-            <div className="mx-auto flex h-full w-full max-w-[1512px] items-center px-6 md:px-8">
+            <div className="flex h-full w-full items-center px-6 md:px-8">
               <div className="max-w-[560px] text-white">
                 <h1 className="font-brother text-[54px] font-[200] uppercase leading-[52px] tracking-[-0.03em]">
                   Born From A

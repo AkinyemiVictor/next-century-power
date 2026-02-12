@@ -16,7 +16,7 @@ export default function WhoWeWorkWithPage() {
             src="/assets/lightbulb%20on%20grass.png"
             alt=""
             fill
-            className="object-contain"
+            className="object-cover object-center"
             sizes="100vw"
             priority
           />

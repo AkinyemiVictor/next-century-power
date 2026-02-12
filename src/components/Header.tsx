@@ -20,14 +20,16 @@ export default function Header() {
       >
         <div className="mx-auto flex h-[107px] w-full max-w-[1512px] items-center justify-between px-6 md:px-8">
           <div className="flex items-center">
-            <Image
-              src="/assets/logo.png"
-              alt="Next Century Power"
-              width={260}
-              height={22}
-              priority
-              className="h-[24px] w-auto"
-            />
+            <Link href="/" aria-label="Go to home page" className="block shrink-0">
+              <Image
+                src="/assets/logo.png"
+                alt="Next Century Power"
+                width={260}
+                height={22}
+                priority
+                className="h-auto w-[260px]"
+              />
+            </Link>
           </div>
           <div className="flex items-center gap-5">
             <Link

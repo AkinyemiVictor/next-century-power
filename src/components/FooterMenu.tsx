@@ -84,6 +84,17 @@ export default function FooterMenu() {
               </Link>
             );
           }
+          if (item === "Sites") {
+            return (
+              <Link
+                key={item}
+                href="/sites"
+                className="text-white/70 transition hover:text-white"
+              >
+                {item.toUpperCase()}
+              </Link>
+            );
+          }
           return <span key={item}>{item.toUpperCase()}</span>;
         })}
         <a
