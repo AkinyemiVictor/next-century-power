@@ -20,12 +20,12 @@ export default function LetsChatPage() {
       <Header />
 
       <section className="relative -mt-[32px] overflow-hidden">
-        <div className="relative h-[235px] w-full">
+        <div className="relative h-[235px] w-full bg-[#ff8000]">
           <Image
             src="/assets/news%20hero%20image.png"
             alt=""
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="100vw"
             priority
           />

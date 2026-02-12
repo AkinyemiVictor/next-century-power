@@ -67,12 +67,12 @@ export default function OurStoryPage() {
       <Header />
 
       <section className="relative -mt-[32px] overflow-hidden">
-        <div className="relative h-[560px] w-full">
+        <div className="relative h-[560px] w-full bg-[#10191c]">
           <Image
             src="/assets/our%20story%20hero.png"
             alt=""
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="100vw"
             priority
           />

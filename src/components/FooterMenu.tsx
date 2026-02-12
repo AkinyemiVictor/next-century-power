@@ -67,6 +67,17 @@ export default function FooterMenu() {
               </Link>
             );
           }
+          if (item === "How We Do It") {
+            return (
+              <Link
+                key={item}
+                href="/how-we-do-it"
+                className="text-white/70 transition hover:text-white"
+              >
+                {item.toUpperCase()}
+              </Link>
+            );
+          }
           return <span key={item}>{item.toUpperCase()}</span>;
         })}
         <a

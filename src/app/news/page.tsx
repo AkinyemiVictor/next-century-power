@@ -23,12 +23,12 @@ export default function NewsPage() {
     >
       <Header />
       <section className="relative -mt-[32px] overflow-hidden">
-        <div className="relative h-[340px] w-full">
+        <div className="relative h-[340px] w-full bg-[#ff8000]">
           <Image
             src="/assets/news hero image.png"
             alt=""
             fill
-            className="object-cover opacity-100"
+            className="object-contain opacity-100"
             sizes="100vw"
             priority
           />
